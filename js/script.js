@@ -4,6 +4,11 @@ function agregar(){
 
 	var cont = document.getElementById("contenedor");
 
+	if (tareas == null || tareas.length == 0){
+		alert("¡Error! Debe ingresar una tarea.");
+		return false;
+	}
+
 	var nuevasTareas = document.createElement("div");
 	var textoNuevaTarea = document.createTextNode(tareas);
 	var elementoContenedor = document.createElement("span");
