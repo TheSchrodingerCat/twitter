@@ -1,3 +1,7 @@
+window.onload = function(){
+	document.getElementById("boton").addEventListener("click",agregar);
+}
+
 function agregar(){
 	var tareas = document.getElementById("tarea").value;
 	document.getElementById("tarea").value = "";
@@ -10,7 +14,7 @@ function agregar(){
 	}
 
 	var nuevasTareas = document.createElement("div");
-	var textoNuevaTarea = document.createTextNode(tareas);
+	var textoNuevaTarea = document.createTextNode(tareas + " ");
 	var elementoContenedor = document.createElement("span");
 
 	elementoContenedor.appendChild(textoNuevaTarea);
@@ -41,10 +45,3 @@ function agregar(){
 		cora.classList.toggle("red");
 	});
 }
-
-
-
-
-
-
-
