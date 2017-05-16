@@ -24,7 +24,17 @@ function agregar(){
 	nuevasTareas.appendChild(basura);
 	nuevasTareas.appendChild(cora);
 
-	
+	chck.addEventListener("click",function(){
+		elementoContenedor.classList.toggle("tachado");
+	});
+
+	basura.addEventListener("click",function(){
+		cont.removeChild(nuevasTareas);
+	});
+
+	cora.addEventListener("click",function(){
+		cora.classList.toggle("red");
+	});
 }
 
 
